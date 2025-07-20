@@ -31,45 +31,11 @@
       </select>
     </section>
 
-    <section id="noticias">
-      <h2>📰 Notícias Confirmadas</h2>
-
-      <div class="card" data-doenca="dengue">
-        <img src="imagens/dengue.jpg" alt="Casos de dengue">
-        <div class="conteudo">
-          <h3>Casos de dengue aumentam 40% no Recife</h3>
-          <p>Pernambuco registra 4 óbitos e 4.620 casos confirmados em 2025, segundo a Secretaria de Saúde.</p>
-          <a href="https://www.diariodepernambuco.com.br/vida-urbana/2025/06/3895955-pernambuco-chega-a-quatro-mortes-por-dengue-em-2025.html" target="_blank">Saiba mais</a>
-        </div>
-      </div>
-
-      <div class="card" data-doenca="oropouche">
-        <img src="imagens/oropouche.jpg" alt="Febre do Oropouche">
-        <div class="conteudo">
-          <h3>Febre do Oropouche: 10 mil casos no Brasil</h3>
-          <p>Doença viral transmitida por mosquitos avança no país, com destaque para estados do Nordeste.</p>
-          <a href="https://www.diariodepernambuco.com.br/dp-/dp-saude/2025/05/3894334-brasil-registra-10-mil-casos-e-quatro-mortes-por-febre-oropouche-em-2025.html" target="_blank">Saiba mais</a>
-        </div>
-      </div>
-
-      <div class="card" data-doenca="gripe">
-        <img src="imagens/gripe.jpg" alt="Campanha de vacinação contra gripe">
-        <div class="conteudo">
-          <h3>Gripe em alta: Ministério libera R$ 50 mi</h3>
-          <p>Casos de influenza e vírus respiratórios crescem em todo o Brasil, alertando para vacinação.</p>
-          <a href="https://www.gov.br/saude/pt-br/assuntos/noticias/2025/junho/saude-alerta-sobre-aumento-de-casos-de-gripe-e-libera-mais-r-50-milhoes-para-reforcar-atendimento-no-sus" target="_blank">Saiba mais</a>
-        </div>
-      </div>
-
-      <div class="card" data-doenca="covid">
-        <img src="imagens/covid.jpg" alt="Vacina contra COVID">
-        <div class="conteudo">
-          <h3>Anvisa atualiza vacinas contra COVID-19</h3>
-          <p>Novas composições seguem recomendação da OMS e incluem variantes LP.8.1 e JN.1.</p>
-          <a href="https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2025/anvisa-atualiza-composicao-das-vacinas-contra-a-covid-19-conforme-recomendacao-da-oms" target="_blank">Saiba mais</a>
-        </div>
-      </div>
-    </section>
+    <!-- Área para exibir notícias da API -->
+<section id="noticias-api">
+  <h2>🌐 Notícias Externas Relacionadas à Saúde</h2>
+  <div id="noticias-externas"></div>
+</section>
 
     <section id="rumores">
       <h2>⚠️ Rumores Populares</h2>
@@ -90,7 +56,7 @@
     <p>&copy; 2025 VigiaSaúde Nordeste | Desenvolvido para fins acadêmicos</p>
   </footer>
 
-  <!-- Assistente Viton -->
+    <!-- Assistente Viton -->
 <div id="assistente-container">
   <button id="abrir-assistente">
     ❓ Ajuda
@@ -108,32 +74,7 @@
       <li><a href="#sobre">ℹ Informações do site</a></li>
     </ul>
     
-<!-- <p>❓ Tem dúvidas sobre alguma doença?</p>
-<textarea id="duvida-doenca" rows="3" placeholder="Digite aqui sua dúvida..." style="width: 100%; padding: 8px; margin-bottom: 8px;"></textarea>
-<button id="enviar-duvida" style="background:#00796b; color:white; border:none; padding:8px; border-radius:5px; cursor:pointer;">Enviar dúvida</button>
-<div id="resposta-assistente" style="
-  margin-top: 10px;
-  font-size: 0.9em;
-  color: #333;
-  max-height: 150px;
-  overflow-y: auto;
-  padding: 8px;
-  background: #f0f0f0;
-  border-radius: 5px;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  line-height: 1.4;
-"></div>
-    <button id="fechar-assistente">Fechar ✖</button>
-  </div>
-</div>
--->
 
-<!-- Área para exibir notícias da API -->
-<section id="noticias-api">
-  <h2>🌐 Notícias Externas Relacionadas à Saúde</h2>
-  <div id="noticias-externas"></div>
-</section>
 
 <!-- jQuery CDN -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
