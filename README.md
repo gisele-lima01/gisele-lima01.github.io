@@ -108,7 +108,7 @@
       <li><a href="#sobre">ℹ Informações do site</a></li>
     </ul>
     
-<p>❓ Tem dúvidas sobre alguma doença?</p>
+<!-- <p>❓ Tem dúvidas sobre alguma doença?</p>
 <textarea id="duvida-doenca" rows="3" placeholder="Digite aqui sua dúvida..." style="width: 100%; padding: 8px; margin-bottom: 8px;"></textarea>
 <button id="enviar-duvida" style="background:#00796b; color:white; border:none; padding:8px; border-radius:5px; cursor:pointer;">Enviar dúvida</button>
 <div id="resposta-assistente" style="
@@ -127,6 +127,49 @@
     <button id="fechar-assistente">Fechar ✖</button>
   </div>
 </div>
+-->
+
+<!-- Área para exibir notícias da API -->
+<section id="noticias-api">
+  <h2>🌐 Notícias Externas Relacionadas à Saúde</h2>
+  <div id="noticias-externas"></div>
+</section>
+
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+$(document).ready(function () {
+  const apiKey = "40c0547765c9428f8fd1f11429ebb417";
+  const url = `https://newsapi.org/v2/everything?q=saúde-pernambuco&language=pt&sortBy=publishedAt&apiKey=${apiKey}`;
+
+  $.get(url, function (data) {
+    if (data.articles && data.articles.length > 0) {
+      const container = $("#noticias-externas");
+      data.articles.forEach(article => {
+         console.log(data);
+        const content = article.content || "";
+        if (content.toLowerCase().includes("saúde")) {
+          const card = `
+            <div class="card">
+              <img src="${article.urlToImage || 'imagens/placeholder.jpg'}" alt="Imagem da notícia">
+              <div class="conteudo">
+                <h3>${article.title}</h3>
+                <p>${article.description || 'Sem descrição disponível.'}</p>
+                <a href="${article.url}" target="_blank">Leia mais</a>
+              </div>
+            </div>`;
+          container.append(card);
+        }
+      });
+    } else {
+      $("#noticias-externas").html("<p>Nenhuma notícia encontrada.</p>");
+    }
+  }).fail(function () {
+    $("#noticias-externas").html("<p>Erro ao carregar notícias da API.</p>");
+  });
+});
+</script>
 
 </body>
 </html>
