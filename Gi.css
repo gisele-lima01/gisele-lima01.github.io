@@ -1,0 +1,218 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7f9;
+  color: #333;
+}
+
+header {
+  background: #005b4f;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+}
+
+header .logo {
+  height: 50px;
+}
+
+nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+h2 {
+  color: #00796b;
+  border-bottom: 2px solid #cce4e0;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+#filtros {
+  background: #d0ebe6;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: white;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-left: 6px solid #009688;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card .conteudo {
+  padding: 15px;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #004d40;
+}
+
+.card p {
+  font-size: 0.95em;
+  margin-bottom: 10px;
+}
+
+.card a {
+  color: #009688;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+#rumores ul {
+  list-style: none;
+  padding: 0;
+}
+
+#rumores li {
+  background: white;
+  margin: 10px 0;
+  padding: 10px;
+  border-left: 5px solid #e57373;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+footer {
+  text-align: center;
+  background: #004d40;
+  color: white;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+/* Container do assistente */
+#assistente-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  font-family: Arial, sans-serif;
+}
+
+/* Botão flutuante */
+#abrir-assistente {
+  background: #009688;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  font-size: 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s;
+}
+
+#abrir-assistente:hover {
+  background: #00796b;
+}
+
+/* Caixa do assistente */
+#assistente-box {
+  width: 260px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  padding: 15px;
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  display: none;
+  flex-direction: column;
+  animation: aparecer 0.3s ease;
+}
+
+#assistente-box.aberto {
+  display: flex;
+}
+
+#assistente-box .assistente-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#assistente-box .viton-avatar {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+#assistente-box h4 {
+  margin: 0;
+  font-size: 1em;
+  color: #009688;
+}
+
+#assistente-box p {
+  margin: 5px 0 10px;
+  font-size: 0.9em;
+}
+
+#assistente-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+#assistente-box li {
+  margin-bottom: 8px;
+}
+
+#assistente-box a {
+  color: #00796b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#assistente-box a:hover {
+  text-decoration: underline;
+}
+
+#fechar-assistente {
+  background: #e57373;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#fechar-assistente:hover {
+  background: #d32f2f;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
