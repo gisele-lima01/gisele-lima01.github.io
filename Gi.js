@@ -25,7 +25,7 @@ fecharAssistente.addEventListener("click", () => {
   assistenteBox.classList.remove("aberto");
 });
 
-document.getElementById("enviar-duvida").addEventListener("click", async () => {
+/*document.getElementById("enviar-duvida").addEventListener("click", async () => {
   const pergunta = document.getElementById("duvida-doenca").value.trim();
   const respostaDiv = document.getElementById("resposta-assistente");
   if (!pergunta) {
@@ -49,3 +49,4 @@ document.getElementById("enviar-duvida").addEventListener("click", async () => {
     console.error(error);
   }
 });
+*/
